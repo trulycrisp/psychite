@@ -62,8 +62,8 @@ class VUCFeature(enum.IntEnum):
     Attributes:
         RESTART: Soft restart.
         RESET_SMART: Reset SMART.
-        JUMP: Jump to code in RAM.
         PREFORMAT: Format/initialise System Area (SA).
+        JUMP: Jump to code in RAM.
         READ_FLASH: Read raw flash page.
         READ_SRAM: Read controller SRAM.
         SYSTEM_INFO: Read system information.
@@ -99,8 +99,8 @@ class VUCFeature(enum.IntEnum):
 
     RESTART = 0x1
     RESET_SMART = 0x2
-    JUMP = 0xF
     PREFORMAT = 0x8
+    JUMP = 0xF
     READ_FLASH = 0x10
     READ_SRAM = 0x12
     SYSTEM_INFO = 0x13

@@ -13,12 +13,32 @@ python -m pip install -e .
 ```
 ## Example Usage
 
-### Linux
+The drive parameter should be a device path, for example `/dev/sg0` for Linux or `\\.\PhysicalDrive0` for Windows.
+
+### Drive Information
 ```
-example/drive_info.py /dev/sg0
+example/drive_info.py <drive>
 ```
 
-### Windows
+### Read Firmware From Drive
 ```
-example/drive_info.py \\.\PhysicalDrive0
+example/read_firmware.py <drive> firmware.bin
 ```
+
+### Unpack Firmware
+```
+example/firmware_tool.py unpack firmware.bin firmware
+```
+
+### Repack Firmware
+```
+example/firmware_tool.py pack firmware firmware.bin
+```
+
+### Install Firmware
+```
+example/update_firmware.py firmware.bin <drive>
+```
+
+Read the scripts in the examples directory for further information.
+
